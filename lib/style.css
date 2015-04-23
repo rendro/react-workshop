@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  background: white;
+  padding: 10px;
+}
+
+body {
+  height: 100%;
+  padding: 10px;
+  background: #ecf0f1;
+  font: 16px Arial, sans-serif;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font: inherit;
+  background: white;
+  border: none;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  transition: border-bottom-color .3s ease-out;
+  outline: none;
+}
+input:focus {
+  border-bottom-color: #2980b9;
+}
+
+button {
+  width: 75px;
+  margin-left: 2px;
+  padding: 5px;
+  border: none;
+  background: #2ecc71;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: opacity .3s ease-out;
+}
+
+button.cancel {
+  background: #c0392b;
+}
+
+button[disabled] {
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
+}
+
+ul form {
+  margin-bottom: 0;
+}
+
+li {
+  transition: all 0.2s ease-out;
+}
+
+li:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.technology {
+  display: flex;
+}
+.technology .name {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.info {
+  text-align: center;
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin: 20px 0;
+}

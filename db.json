@@ -1,0 +1,36 @@
+{
+  "technologies": [
+    {
+      "name": "Angluar.js",
+      "id": 2
+    },
+    {
+      "name": "React.js",
+      "id": 3
+    },
+    {
+      "name": "Ampersand",
+      "id": 4
+    },
+    {
+      "name": "knockout",
+      "id": 5
+    },
+    {
+      "name": "jQuery",
+      "id": 6
+    },
+    {
+      "name": "Ember",
+      "id": 7
+    },
+    {
+      "name": "regenerator",
+      "id": 8
+    },
+    {
+      "name": "Immutable.js",
+      "id": 9
+    }
+  ]
+}
