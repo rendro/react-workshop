@@ -1,20 +1,13 @@
 import React from 'react'
-import FluxComponent from 'flummox/component'
-import NewTechnology from './new-technology.jsx!'
-import FilterableTechnologyList from './filterable-technology-list.jsx!'
 
-export default class Technologies extends React.Component {
+var Technologies = React.createClass({
 
-  componentDidMount() {
-    this.props.flux.getActions('technologies').getAll();
-  }
-
-  render() {
+  render: function() {
     return (
-      <FluxComponent  connectToStores={['technologies']}>
-        <NewTechnology />
-        <FilterableTechnologyList />
-      </FluxComponent>
+      <h1>Hello, World!</h1>
     );
   }
-}
+
+});
+
+export default Technologies;
