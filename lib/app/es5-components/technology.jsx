@@ -1,29 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-export default class Technology extends React.Component {
+var Technology = React.createClass({
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
+  getInitialState: function() {
+    return {
       edit: false
     };
+  },
 
-    this.updateTechnology = this.updateTechnology.bind(this);
-    this.edit = this.edit.bind(this);
-    this.delete = this.delete.bind(this);
-    this.cancelEdit = this.cancelEdit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate: function(nextProps, nextState) {
     if (nextProps.technology !== this.props.technology) {
       return true;
     }
     return (this.state.value !== nextState.value || this.state.edit !== nextState.edit);
-  }
+  },
 
-  updateTechnology(e) {
+  updateTechnology: function(e) {
     e.preventDefault();
 
     this.props.flux.getActions('technologies').update(this.props.technology.id, {
@@ -31,34 +23,34 @@ export default class Technology extends React.Component {
     });
 
     this.setState({ edit: false  });
-  }
+  },
 
-  edit() {
+  edit: function() {
     this.setState({
       edit: true,
       value: this.props.technology.name
     });
-  }
+  },
 
-  cancelEdit(e) {
+  cancelEdit: function(e) {
     e.preventDefault();
     this.setState({
       edit: false
     });
-  }
+  },
 
-  handleChange(e) {
+  handleChange: function(e) {
     this.setState({
       value: e.target.value
     });
-  }
+  },
 
-  delete(e) {
+  delete: function(e) {
     e.preventDefault();
     this.props.flux.getActions('technologies').delete(this.props.technology.id);
-  }
+  },
 
-  render() {
+  render: function() {
     if (this.state.edit) {
       return (
         <form onSubmit={this.updateTechnology}>
@@ -77,4 +69,6 @@ export default class Technology extends React.Component {
       </div>
     );
   }
-}
+});
+
+export default Technology;

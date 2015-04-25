@@ -1,6 +1,6 @@
-import React from 'react'
-import FluxComponent from 'flummox/component'
-import Technology from './technology.jsx!'
+import React from 'react';
+import FluxComponent from 'flummox/component';
+import Technology from './technology.jsx!';
 
 let byName = (a, b) => {
   if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;

@@ -1,6 +1,6 @@
-import React from 'react'
-import FluxComponent from 'flummox/component'
-import Technologies from './components/technologies.jsx!'
+import React from 'react';
+import FluxComponent from 'flummox/component';
+import Technologies from './es6-components/technologies.jsx!';
 
 export default class App extends React.Component {
 

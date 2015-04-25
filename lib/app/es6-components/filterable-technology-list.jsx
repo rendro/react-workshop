@@ -1,7 +1,11 @@
-import React from 'react'
-import TechnologyList from './technology-list.jsx!'
+import React from 'react';
+import TechnologyList from './technology-list.jsx!';
 
 export default class FilterableTechnologyList extends React.Component {
+
+  static defaultProps: {
+    technologies: []
+  };
 
   constructor(props) {
     super(props);
